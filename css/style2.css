@@ -1,0 +1,230 @@
+.wrapper .left,
+.wrapper .right {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+
+}
+
+
+
+.wrapper .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease all;
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+}
+
+
+.wrapper .customer {
+    background-image: url(../Images/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.wrapper .technician {
+    background-image: url(../Images/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper .left:hover .image,
+.wrapper .right:hover .image {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+
+}
+
+
+.wrapper .side::before {
+    content: "";
+    background: rgb(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+}
+
+.wrapper .caption {
+    position: relative;
+    z-index: 10;
+    color: beige;
+    text-align: center;
+
+}
+
+.wrapper .caption h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.wrapper .caption .button {
+    background-color: aqua;
+    color: cadetblue;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+}
+
+/* Start Media Query */
+@media screen and (min-width:970px) {
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper .left,
+    .wrapper .right {
+        width: 50%;
+        height: 100vh;
+    }
+}
+
+
+
+.wrapper .left {
+    background-color: cyan;
+}
+
+.wrapper .right {
+    background-color: plum;
+}
+
+
+
+
+
+/* Buttons Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+body {
+    justify-content: center;
+    align-items: center;
+    background-color: #0c0c0c;
+}
+
+a {
+    position: relative;
+    padding: 20px 50px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+}
+
+a span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: px;
+}
+
+a .liquid {
+    position: absolute;
+    left: 0;
+    top: -80px;
+    width: 200px;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+a:hover .liquid {
+    top: -115px;
+}
+
+a .liquid::before,
+a .liquid::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    -webkit-transform: translate(-50%, -75%);
+    -moz-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    -o-transform: translate(-50%, -75%);
+    background: #000;
+}
+
+a .liquid::before {
+    border-radius: 45%;
+    -webkit-border-radius: 45%;
+    -moz-border-radius: 45%;
+    -ms-border-radius: 45%;
+    -o-border-radius: 45%;
+    background: rgb(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+    -webkit-animation: animate 5s linear infinite;
+}
+
+a .liquid::after {
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    background: rgb(20, 20, 20, 0.5);
+    animation: animate 5s linear infinite;
+    -webkit-animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -75%)rotate(0deg);
+        -webkit-transform: translate(-50%, -75%)rotate(0deg);
+        -moz-transform: translate(-50%, -75%)rotate(0deg);
+        -ms-transform: translate(-50%, -75%)rotate(0deg);
+        -o-transform: translate(-50%, -75%)rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%)rotate(360deg);
+        -webkit-transform: translate(-50%, -75%)rotate(360deg);
+        -moz-transform: translate(-50%, -75%)rotate(360deg);
+        -ms-transform: translate(-50%, -75%)rotate(360deg);
+        -o-transform: translate(-50%, -75%)rotate(360deg);
+    }
+}
+
+/* Buttons Style */
